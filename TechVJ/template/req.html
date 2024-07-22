@@ -1,6 +1,6 @@
-<!-- © LazyDeveloper -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="https://i.ibb.co/VVgrDzF/Picsart-23-06-16-09-05-26-429.jpg" type="image/x-icon">
@@ -8,126 +8,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{file_name}} | SK Movies Official</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type='text/css' href="https://drive----google.com/uc?export=view&id=1pVLG4gZy7jdow3sO-wFS06aP_A9QX0O6">
+    <link rel="stylesheet" type='text/css' href="https://drive.google.com/uc?export=view&id=1pVLG4gZy7jdow3sO-wFS06aP_A9QX0O6">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        new WOW().init();
+
+        function vlc_player() {
+            alert("Open with VLC Player");
+        }
+
+        function mx_player() {
+            alert("Open with MX Player");
+        }
+
+        function playit_player() {
+            alert("Open with Play-it Player");
+        }
+
+        function km_player() {
+            alert("Open with KM Player");
+        }
+    </script>
+    <style>
+        .bg-clip-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
 </head>
 
 <body class="bg-black">
     <header>
-
-                <!-- web title -->
-                <div class="container-fluid">
-                    <a class="navbar-brand  text-light fw-bold " href="https://telegram.me/SK_MoviesOffl">
-                        <span class="bg-clip-text sm:text-[25px] text-[22px] text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-                           SK Movies Official
-                          </span>
-                    </a>
-                  </div>
-               </div>
-            </nav>
-            <!-- ./Navbar -->
+        <div class="container-fluid">
+            <a class="navbar-brand text-light fw-bold" href="https://telegram.me/SK_MoviesOffl">
+                <span class="bg-clip-text sm:text-[25px] text-[22px] text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                    SK Movies Official
+                </span>
+            </a>
+        </div>
     </header>
-    <!-- ./Header -->
 
-    <div class="bg-black  text-light"  >
-        <!-- file Name -> to be displayed here  -->
+    <div class="bg-black text-light">
+        <!-- File Name -->
         <div class="justify-content-center align-items-center w-100 d-flex">
-            <div id="file-name" class="tex-center text-lg max:w-74  p-2 flex-wrap text-center justify-center items-center">
-                <p class="fw-bold"> 
-                    <span id="myDiv" class="h6 flex-wrap text-center justify-center items-center card-title wow animate__animated animate__fadeInRight" >
+            <div id="file-name" class="text-center text-lg max:w-74 p-2 flex-wrap justify-center items-center">
+                <p class="fw-bold">
+                    <span id="myDiv" class="h6 flex-wrap text-center justify-center items-center card-title wow animate__animated animate__fadeInRight">
                         {{file_name}}
                     </span>
                 </p>
             </div>
         </div>
-        <!-- Online Video Player -> to be displayed here  -->
-        <div class="justify-content-center align-items-center w-100 d-flex  flex-wrap">
-            <div class="lg:w-9/12 lg:px-12 lg:py-4 w-full  border border-danger wow animate__animated animate__fadeInLeft">
-                <video id="player" class="player " playsinline controls>
+
+        <!-- Online Video Player -->
+        <div class="justify-content-center align-items-center w-100 d-flex flex-wrap">
+            <div class="lg:w-9/12 lg:px-12 lg:py-4 w-full border border-danger wow animate__animated animate__fadeInLeft">
+                <video id="player" class="player" playsinline controls>
                     <source src="{{file_url}}" type="video/mp4">
                 </video>
             </div>
         </div>
 
- <!-- Online Video Player -->
-<div class="justify-content-center align-items-center w-100 d-flex flex-wrap">
-    <div class="lg:w-9/12 lg:px-12 lg:py-4 w-full border border-danger wow animate__animated animate__fadeInLeft">
-        <video id="player" class="player" playsinline controls>
-            <source src="{{file_url}}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
+        <!-- External video player section -->
+        <div class="justify-content-center align-items-center w-100 d-flex">
+            <div class="row d-flex w-100 justify-content-center align-items-center">
+                <div class="col-lg-7 col-12 d-flex justify-content-start align-items-center">
+                    <p class="h4 px-2 mt-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-orange-600 font-bold mb-2">Play with...</p>
+                </div>
+                <div class="col-lg-6 col-10 d-flex justify-center items-center flex-wrap pb-3 gap-2 wow animate__animated animate__fadeIn">
+                    <div onclick="vlc_player()" class="card card-body col-lg-3 col-5 bg-dark text-secondary text-center justify-content-center align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInLeft">
+                        <svg class="wow animate__animated animate__shakeX animate__delay-1s" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 64 64"><linearGradient id="d2lfkA6lemjIH1JdWslHIa_74320_gr1" x1="32" x2="32" y1="16.021" y2="39.25" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset=".437" stop-color="#6dc7ff"></stop><stop offset="1" stop-color="#e6abff"></stop></linearGradient><path fill="url(#d2lfkA6lemjIH1JdWslHIa_74320_gr1)" d="M32,31.25c2.891,0,5.255-0.323,6.939-0.712l2.409,7.664C37.765,39.116,33.881,39.25,32,39.25 c-1.88,0-5.765-0.134-9.347-1.049l2.408-7.663C26.745,30.927,29.11,31.25,32,31.25z M32.5,24.25c1.554,0,2.999-0.141,4.343-0.38 l-2.429-7.729c-0.587,0.063-1.211,0.109-1.914,0.109c-1.1,0-2.062-0.092-2.876-0.229l-2.404,7.651 C28.816,24.034,30.574,24.25,32.5,24.25z"></path><linearGradient id="d2lfkA6lemjIH1JdWslHIb_74320_gr2" x1="32.105" x2="32.105" y1="7.415" y2="56" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset="0" stop-color="#1a6dff"></stop><stop offset="1" stop-color="#c822ff"></stop></linearGradient><path fill="url(#d2lfkA6lemjIH1JdWslHIb_74320_gr2)" d="M56.903,50.041l-2.216-10.779c-0.513-2.265-2.52-3.847-4.881-3.847H45.09l-8.059-24.451 c-0.7-2.123-2.726-3.549-5.04-3.549c-2.314,0-4.339,1.426-5.039,3.549l-8.058,24.451h-4.491c-2.362,0-4.369,1.582-4.885,3.866 L7.31,50.021c-0.327,1.442,0.019,2.937,0.947,4.099C9.212,55.314,10.645,56,12.19,56h39.828c1.545,0,2.979-0.685,3.934-1.88 C56.88,52.958,57.226,51.464,56.903,50.041z M19.096,41.19l9.755-29.601c0.429-1.301,1.634-2.168,3.059-2.168 c1.425,0,2.63,0.867,3.058,2.168l9.755,29.601c0.068,0.206,0.044,0.431-0.065,0.622c-0.109,0.191-0.288,0.327-0.497,0.384 c-2.652,0.675-6.472,1.203-9.959,1.203c-3.488,0-7.308-0.528-9.96-1.203c-0.208-0.057-0.387-0.193-0.496-0.384 C19.052,41.621,19.027,41.396,19.096,41.19z M53.064,53.204c-0.589,0.713-1.442,1.117-2.364,1.117H12.19 c-0.922,0-1.774-0.404-2.364-1.117c-0.589-0.713-0.82-1.62-0.646-2.501l2.215-10.778c0.329-1.598,1.752-2.724,3.407-2.724 h7.005l-1.948,6.202c-0.276,0.877-0.141,1.836,0.372,2.611c0.513,0.775,1.319,1.322,2.242,1.524 c2.88,0.652,6.392,1.063,9.528,1.063c3.136,0,6.648-0.411,9.528-1.063c0.923-0.202,1.729-0.749,2.242-1.524 c0.513-0.775,0.648-1.734,0.372-2.611l-1.949-6.202h7.005c1.655,0,3.078,1.126,3.59,2.756l2.216,10.779 C53.885,51.584,53.652,52.491,53.064,53.204z"></path></svg>
+                        <p class="text-light p-2">VLC Player</p>
+                    </div>
 
-<!-- External video player section -->
-<div class="justify-content-center align-items-center w-100 d-flex">
-    <div class="row d-flex w-100 justify-content-center align-items-center">
-        <div class="col-lg-7 col-12 d-flex justify-content-start align-items-center">
-            <p class="h4 px-2 mt-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-orange-600 font-bold mb-2">Play with...</p>
-        </div>
-        <div class="col-lg-6 col-10 d-flex justify-center items-center flex-wrap pb-3 gap-2 wow animate__animated animate__fadeIn">
-            <div onclick="vlc_player()" class="card card-body col-lg-3 col-5 bg-dark text-secondary text-center justify-content-center align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInLeft">
-                <svg class="wow animate__animated animate__shakeX animate__delay-1s" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 64">
-                    <!-- SVG Content for VLC Player -->
-                </svg>
-                VLC Player
-            </div>
-            <div onclick="mx_player()" class="card card-body col-lg-3 col-5 bg-dark text-secondary text-center justify-content-center align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInRight">
-                <svg class="wow animate__animated animate__shakeX animate__delay-2s" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 64">
-                    <!-- SVG Content for MX Player -->
-                </svg>
-                Mx Player
-            </div>
-            <div onclick="playit_player()" class="card card-body col-lg-3 col-5 bg-dark text-secondary text-center justify-content-center align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInLeft">
-                <svg class="wow animate__animated animate__shakeX animate__delay-1s" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48">
-                    <!-- SVG Content for Play-it -->
-                </svg>
-                Play-it
-            </div>
-            <div onclick="km_player()" class="card card-body col-lg-3 col-5 bg-dark text-secondary text-center jcc align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInRight">
-                <svg class="wow animate__animated animate__shakeX animate__delay-2s" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 64">
-                    <!-- SVG Content for KM Player -->
-                </svg>
-                KM Player
-            </div>
-            <div onclick="s_player()" class="card card-body col-lg-3 col-5 bg-dark text-secondary text-center jcc align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInRight">
-                <svg class="wow animate__animated animate__shakeX animate__delay-3s" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 64">
-                    <!-- SVG Content for S Player -->
-                </svg>
-                S Player
-            </div>
-        </div>
-    </div>
-</div>
+                    <div onclick="mx_player()" class="card card-body col-lg-3 col-5 bg-dark text-secondary text-center justify-content-center align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInLeft">
+                        <svg class="wow animate__animated animate__shakeX animate__delay-1s" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48"><path fill="#ffa000" d="M6 10L20.802 39.931C21.68 41.758 24.32 41.758 25.198 39.931L40 10z"></path><path fill="#ff6f00" d="M4.473 10.658L19.275 40.589C20.153 42.415 22.793 42.415 23.671 40.589L38.473 10.658C39.385 8.748 37.9 6.5 35.803 6.5H8.197C6.1 6.5 4.615 8.748 5.527 10.658zM24 33A2 2 0 1 1 24 29A2 2 0 1 1 24 33zM24 24A2 2 0 1 1 24 20A2 2 0 1 1 24 24zM24 15A2 2 0 1 1 24 11A2 2 0 1 1 24 15z"></path></svg>
+                        <p class="text-light p-2">MX Player</p>
+                    </div>
 
-<script>
-    // Sample functions to handle player selection
-    function vlc_player() {
-        // Implement VLC Player logic
-    }
-    function mx_player() {
-        // Implement MX Player logic
-    }
-    function playit_player() {
-        // Implement Play-it Player logic
-    }
-    function km_player() {
-        // Implement KM Player logic
-    }
-    function s_player() {
-        // Implement S Player logic
-    }
-</script>
+                    <div onclick="playit_player()" class="card card-body col-lg-3 col-5 bg-dark text-secondary text-center justify-content-center align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInRight">
+                        <svg class="wow animate__animated animate__shakeX animate__delay-1s" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48"><linearGradient id="3te31_mLqzDWqF0Wf7z9wa_TFYkcNpgOpJV_gr1" x1="25.107" x2="24.827" y1="13.221" y2="40.759" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a6dff"></stop><stop offset=".443" stop-color="#3174ff"></stop><stop offset=".868" stop-color="#4d7eff"></stop><stop offset="1" stop-color="#5882ff"></stop></linearGradient><path fill="url(#3te31_mLqzDWqF0Wf7z9wa_TFYkcNpgOpJV_gr1)" d="M43.56,36.29l-0.04-0.14c0-0.02-0.01-0.03-0.01-0.04L34.43,13.41c-0.58-1.39-1.86-2.37-3.34-2.55l-0.04-0.01 c-1.48-0.17-2.95,0.38-3.93,1.49L13.14,23.28c-0.67,0.74-1.11,1.68-1.25,2.68c-0.14,1-0.02,2.01,0.34,2.94 c0.68,1.63,2.08,2.83,3.79,3.27l10.63,2.7l-2.55,4.5c-1.46,2.57-0.55,5.83,2.12,7.09c0.69,0.33,1.42,0.51,2.15,0.51 c1.93,0,3.75-1.07,4.68-2.83L43.2,40.4C44.27,38.51,44.61,37.09,43.56,36.29z M16.19,27.25c-0.19-0.47-0.25-0.98-0.18-1.48 s0.28-0.99,0.63-1.38L25.32,14.6l6.71,16.07L16.19,27.25z M23.83,39.6c-0.95-0.46-1.29-1.59-0.74-2.5l3.07-5.43l5.05,1.28 L25.75,41C25.32,41.76,24.33,42.14,23.83,39.6z M35.77,37.77l-6.95-1.75L34.02,23.2l5.64,13.52C39.88,37.97,38.13,38.39,35.77,37.77z"></path><linearGradient id="3te31_mLqzDWqF0Wf7z9wa_TFYkcNpgOpJV_gr2" x1="31.744" x2="20.29" y1="7.878" y2="24.615" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffde00"></stop><stop offset="1" stop-color="#ffab00"></stop></linearGradient><path fill="url(#3te31_mLqzDWqF0Wf7z9wa_TFYkcNpgOpJV_gr2)" d="M15.33,14.57c1.55-0.12,3.08,0.47,4.21,1.57c1.08,1.04,1.76,2.48,1.9,3.99l1.56,16.6c0.16,1.67-0.57,3.4-1.92,4.27 c-1.3,0.82-3.01,0.88-4.4,0.23c-1.3-0.6-2.33-1.7-2.86-3.06L8.91,24.71c-0.64-1.66-0.44-3.64,0.62-5.02 C10.66,17.58,12.9,14.7,15.33,14.57z"></path></svg>
+                        <p class="text-light p-2">Play-it Player</p>
+                    </div>
 
+                    <div onclick="km_player()" class="card card-body col-lg-3 col-5 bg-dark text-secondary text-center justify-content-center align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInRight">
+                        <svg class="wow animate__animated animate__shakeX animate__delay-1s" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50"><path fill="#ff6f00" d="M 25 2 C 12.309 2 2 12.309 2 25 C 2 37.691 12.309 48 25 48 C 37.691 48 48 37.691 48 25 C 48 12.309 37.691 2 25 2 z M 25 4 C 36.615 4 46 13.385 46 25 C 46 27.301 45.573 29.505 44.804 31.517 L 33.375 20.088 C 31.731 18.444 29.016 18.444 27.372 20.088 L 20.088 27.372 L 6.828 14.113 C 10.221 8.636 17.12 4 25 4 z M 4.771 16.277 L 18.541 30.047 L 11.257 37.332 C 9.613 38.976 9.613 41.691 11.257 43.335 L 18.541 50.619 C 13.999 50.807 9.384 49.596 5.843 47.196 C 3.648 43.998 2 39.697 2 35.002 C 2 29.855 2.886 25.013 4.771 20.803 z M 25 20.584 L 27.372 23.116 C 28.164 23.909 28.164 25.173 27.372 25.965 L 25 28.337 L 22.628 25.965 C 21.836 25.173 21.836 23.909 22.628 23.116 L 25 20.584 z M 25 31.663 L 27.372 34.134 C 28.164 34.926 28.164 36.19 27.372 36.983 L 25 39.414 L 22.628 36.983 C 21.836 36.19 21.836 34.926 22.628 34.134 L 25 31.663 z M 25 42.742 L 27.372 45.213 C 28.164 46.006 28.164 47.269 27.372 48.062 L 25 50.494 L 22.628 48.062 C 21.836 47.269 21.836 46.006 22.628 45.213 L 25 42.742 z M 36.628 27.116 L 39 29.337 L 36.628 31.659 C 35.836 32.451 35.836 33.714 36.628 34.507 L 39 36.929 L 41.372 34.507 C 42.164 33.714 42.164 32.451 41.372 31.659 L 39 29.337 L 41.372 27.116 C 42.164 26.324 42.164 25.061 41.372 24.268 L 39 22.846 L 36.628 24.268 C 35.836 25.061 35.836 26.324 36.628 27.116 z"></path></svg>
+                        <p class="text-light p-2">KM Player</p>
+                        
+                         km Player
+                            </div>
+                            <div onclick="s_player()" class="card card-body col-lg-3  col-5 bg-dark text-secondary text-center jcc align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInRight">
+                                <svg class="wow animate__animated animate__shakeX  animate__delay-3s " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 64 64">
+                                    <linearGradient id="u3DU_xVfwAA7Ehald_UwAa_79075_gr1" x1="35.5" x2="35.5" y1="6.999" y2="57" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset="0" stop-color="#1a6dff"></stop><stop offset="1" stop-color="#c822ff"></stop></linearGradient><path fill="url(#u3DU_xVfwAA7Ehald_UwAa_79075_gr1)" d="M56.7,30c-0.95-0.5-9.83-5.54-9.92-5.6L16.69,7.42c-0.91-0.51-1.89-0.56-2.62-0.13 C13.39,7.69,13,8.44,13,9.34v45.57c0,0.81,0.35,1.47,0.96,1.83c0.3,0.17,0.63,0.26,0.98,0.26c0.42,0,0.86-0.12,1.29-0.37 l40.43-22.81c1.18-0.67,1.35-1.52,1.34-1.97C57.99,31.11,57.52,30.43,56.7,30z M44.59,25.46l-5.18,5.03L19.82,11.48L44.59,25.46z M15,54.2V9.6l22.98,22.29L15,54.2z M19.81,52.31l19.6-19.03l5.2,5.04L19.81,52.31z M55.67,32.08l-9.24,5.22l-5.58-5.41l5.56-5.4 c2.04,1.16,8.52,4.84,9.36,5.28c0.08,0.04,0.14,0.08,0.18,0.12C55.89,31.94,55.81,32,55.67,32.08z"></path><linearGradient id="u3DU_xVfwAA7Ehald_UwAb_79075_gr2" x1="26.055" x2="26.055" y1="14.33" y2="49.47" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset="0" stop-color="#6dc7ff"></stop><stop offset="1" stop-color="#e6abff"></stop></linearGradient><path fill="url(#u3DU_xVfwAA7Ehald_UwAb_79075_gr2)" d="M35.11 31.89L17 49.47 17 14.33z"></path>
+                                </svg>
+                                S Player
+                            </div>
 
                       <div onclick="hd_player()" class="card card-body col-lg-3  col-5 bg-dark text-secondary text-center jcc align-items-center hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-300 wow animate__animated animate__fadeInRight">
                                 <svg class="wow animate__animated animate__shakeX  animate__delay-3s " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="50px" width="50px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
@@ -142,30 +126,23 @@
                         </div>
                 </div>
             </div>
-            <div class="justify-content-center align-items-center w-100 d-flex mb-3">
-                <div class="row d-flex w-100 justify-content-center align-items-center">
-                    <div class="col-lg-8 col-10  py-2 text-center bg-danger rounded-4 text-sm wow animate__animated animate__FadeIn">
-                            Video not playing ? possibly because your browser or the player doesn't support codec please download and watch.
                     </div>
                 </div>
             </div>
-            <div class="justify-content-center align-items-center w-100 d-flex mb-3">
-                <div class="row d-flex w-100 justify-content-center align-items-center">
-                    <div class="col-lg-5 col-10  py-2 text-center bg-success rounded-4 text-sm wow animate__animated animate__FadeIn">
-                        If you find any broken links then please contact <a href="https://telegram.me/SKMoviesAdmin
-                        " class="text-[16px] font-bold underline active:text-blue-600" > SK MOVIES ADMIN
-                      </a>
-                    </div>
-                </div>
-            </div>
+        </div>
 
+        <!-- Review Us Section -->
+        <div class="justify-content-center align-items-center w-100 d-flex flex-wrap wow animate__animated animate__zoomInUp mt-3">
+            <a href="https://telegram.me/SK_MoviesOffl" class="d-flex justify-content-center align-items-center mt-2 mb-3">
+                <div class="text-center text-light">
+                    <h4 class="px-2 mt-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-orange-600 font-bold mb-2">
+                        Review Us @ SK Movies Official <br>
+                     Credit @ LazyDeveloper 
+                    </h4>
+                </div>
+            </a>
+        </div>
     </div>
+</body>
 
-        <footer class="bg-dark justify-content-around align-items-center">
-            <div class="container-fluid  justify-content-center align-itemsd x. -center">
-                <!-- Section: Social media -->
-                <section class="lg:p-4 p-2 justify-content-center align-items-center text-center ">  
-               <!-- YouTube -->
-                    <a class="btn btn-outline-light btn-floating m-1 rounded-circle p-2 border-secondary wow animate__animated animate__fadeInLeft hover:shadow-md hover:shadow-gray-400 hover:translate-y-[-5px] transition transition-all duration-200" href="https://www.youtube.com/channel/UCdUDS2bgMqSJNCkl5MVJMkg" target="_blank" role="button">
-                         <svg class="wow animate__animated animate__heartBeat animate__delay-1s animate__infinite" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 64 64">
-                            <linearGradient id="PMWUiMSnUf2R_PPJ6rqZea_44112_gr1" x1="32" x2="32" y1="10" y2="54.751" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset="0" stop-color="#1a6dff"></stop><stop offset="1" stop-color="#c822ff"></stop></linearGradient><path fill="url(#PMWUiMSnUf2R_PPJ6rqZea_44112_gr1)" d="M32,53.001c-6.358,0-12.716-0.195-19.299-0.584c-4.96-0.293-8.961-4.242-9.308-9.187 c-0.521-7.452-0.521-15.009-0.001-22.46c0.348-4.945,4.349-8.895,9.309-9.188c13.167-0.778,25.433-0.778,38.598,0 c4.96,0.293,8.961,4.242,9.308,9.187c0.521,7.452,0.521,15.009,0.001,22.46c-0.348,4.945-4.349
+</html>
