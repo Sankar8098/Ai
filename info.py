@@ -20,7 +20,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'TheBlackBot')
 API_ID = int(environ.get('API_ID', '23990433'))
 API_HASH = environ.get('API_HASH', 'e6c4b6ee1933711bc4da9d7d17e1eb20')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6300056570:AAGWR0E-Q_QuIyJHG2Jf1eRlALtTAuEnDrM")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6300056570:AAH9KW75VjevVAKq5TC_etRsSq2CQSAeD5s")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
